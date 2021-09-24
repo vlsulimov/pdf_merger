@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2019",
+    "outDir": "./build",
+    "sourceMap": true,
+    "newLine": "lf",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "preserveSymlinks": true,
+    "pretty": true,
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "pdf_merger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node build/index.js",
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/index.ts\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdf-merger-js": "^3.2.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.1",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prefer-arrow": "^1.2.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "nodemon": "^2.0.4",
+    "typescript": "^4.0.3",
+    "prettier": "2.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache"
+  }
+}
